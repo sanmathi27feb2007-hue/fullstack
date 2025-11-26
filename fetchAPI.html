@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+</body>
+<style>
+    .box{
+         height: 100px;
+        background-color: purple;
+        font-size: 20px;
+        font-weight: bold;
+        border: 5px solid black;
+    }
+</style>
+<body>
+    <h1 id="head1">
+        Fetch API Example
+    </h1>
+    <div class="box">1</div>
+     <div class="box">2</div>
+      <div class="box">3</div>
+       <div class="box">4</div>
+        <div class="box">5</div>  
+        
+        
+       <div class="square">
+
+       </div>
+
+    <script>
+  const h1 =  document.getElementById("head1").innerText;
+  console.log(h1);
+
+    const boxes = document.getElementsByClassName("box")[0].innerText='Changed text';
+    console.log(boxes);
+
+    document.querySelector(".square").innerText = "Hello square";
+    document.querySelector(".square").style.height = "150px";    
+    document.querySelector(".square").style.width = "150px";    
+    document.querySelector(".square").style.backgroundColor = "red";  
+       </script>
+
+</body>
+</html>

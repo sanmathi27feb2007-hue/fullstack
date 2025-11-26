@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card with Toggle</title>
+
+    <style>
+        .container {
+            font-family: Arial, sans-serif;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background:vio;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            width: 280px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .profile-img {
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: green;
+        }
+
+        .details {
+            margin-top: 10px;
+            display: none; /* Hidden initially */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">Task 1: Profile Card with Toggle</h1>
+
+    <div class="container">
+        <div class="card">
+            <img src="download.jpg" alt="Profile" class="profile-img">
+            <h2>Sanmathi</h2>
+
+            <!-- Hidden details section -->
+            <div class="details" id="info">
+                <p>Artificial Intelligence and Data Science</p>
+                <p>Email: example@mail.com</p>
+            </div>
+
+            <button onclick="toggleInfo()" id="toggleBtn">Show Info</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo() {
+            let info = document.getElementById("info");
+            let btn = document.getElementById("toggleBtn");
+
+            if (info.style.display === "none") {
+                info.style.display = "block";
+                btn.textContent = "Hide Info";
+            } else {
+                info.style.display = "none";
+                btn.textContent = "Show Info";
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+
+    <style>
+        #count {                                                                                              
+            font-size: 40px;
+            margin: 10px;
+            color: purple;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Simple Counter App</h2>
+
+<p id="count">4</p>
+
+<button id="inc">Increase</button>
+<button id="dec">Decrease</button>
+<button id="reset">Reset</button>
+<br><br>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+
+<script>
+
+    let count = 4;
+
+    document.getElementById("inc").addEventListener("click", function() {
+        count++;
+        document.getElementById("count").innerText = count;
+    });
+
+    document.getElementById("dec").addEventListener("click", function() {
+        count--;
+        document.getElementById("count").innerText = count;
+    });
+
+    document.getElementById("reset").addEventListener("click", function() {
+        count = 0;
+        document.getElementById("count").innerText = count;
+    });
+
+    // Hide the counter
+    document.getElementById("hide").addEventListener("click", function() {
+        document.getElementById("count").style.display = "none";
+    });
+
+    // Show the counter
+    document.getElementById("show").addEventListener("click", function() {
+        document.getElementById("count").style.display = "block";
+    });
+
+</script>
+
+</body>
+</html>

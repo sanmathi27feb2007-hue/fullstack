@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile Card</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <style>
+    .container{
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: #fff;
+  padding: 80px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#hide{
+  background-color:blueviolet ;
+  color: white;
+    padding: 20px 60px;
+  border: none;
+  border-radius: 6px;
+  font-size: 32px;
+   cursor: pointer;
+}
+#show{
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 20px 60px;
+  font-size: 32px;
+   cursor: pointer;
+}
+</style>
+<body>
+  <button id="hide">hide</button>
+  <button id="show">show</button>
+<div class="profile">
+    <h1>Task 1: Create a Personal Profile Card</h1>
+    <div class="container">
+  <div class="card">
+    <img src="image/image.png" alt="Profile" class="profile-img">
+    <h2>sanmathi</h2>
+    <h3>AD-B</h3>
+    <p>2024-2028</p>
+    <button class="btn">Contact Me</button>
+  </div>
+  </div>
+  </div>
+  <script>
+    $(document).ready(function(){
+      $('#hide').click(function(){
+        $('.profile').hide()
+      })
+
+      $('#show').click(function(){
+        $('.profile').show()
+      })
+    })
+  </script>
+</body>
+</html>
